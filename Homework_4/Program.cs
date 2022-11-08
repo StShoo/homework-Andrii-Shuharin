@@ -20,9 +20,13 @@ namespace Homework_4
             char sign = ReadSighn();
             var result = MakeCalculations(firstValue,secondValue, sign);
 
-            if (!IsSecondValueZero(secondValue) && !IsOperationDivision(sign))
+            if (!(IsSecondValueZero(secondValue) && IsOperationDivision(sign)))
             {
                 PrintResult(result, ComposeOperationToString(firstValue, secondValue, sign));
+            }
+            else
+            {
+                Console.Write("Operation is impossible");
             }
         }
 
@@ -49,7 +53,7 @@ namespace Homework_4
                 try
                 {
                     var sign = Convert.ToChar(Console.ReadLine() ?? string.Empty);
-                    if (sign == '+' || sign == '-' || sign == '/' || sign == '*')
+                    if (sign is '+' or '-' or '/' or '*')
                     {
                         return sign;
                     }

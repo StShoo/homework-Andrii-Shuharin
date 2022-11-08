@@ -7,18 +7,26 @@ namespace Homework_4
         static void Main(string[] args)
         {
             task_1();
-
         }
 
         // Task 1
-        static void task_1()
+        private static void task_1()
         {
-            Console.WriteLine("Please enter two numbers:");
+            Console.Write("Please enter first number:");
+            int firstValue = ReadValue();
+            Console.Write("Please enter first number:");
+            int secondValue = ReadValue();
+            Console.Write("Please enter operation: ");
+            char sign = ReadSighn();
+            var result = MakeCalculations(firstValue,secondValue, sign);
 
-            makeCalculations(readValue(), readValue(), readSighn());
+            if (!IsSecondValueZero(secondValue) && !IsOperationDivision(sign))
+            {
+                PrintResult(result, ComposeOperationToString(firstValue, secondValue, sign));
+            }
         }
 
-        static int readValue()
+        private static int ReadValue()
         {
             do
             {
@@ -34,34 +42,33 @@ namespace Homework_4
             } while (true);
         }
 
-        static char readSighn()
+        static char ReadSighn()
         {
-            Console.Write("Please enter operation: ");
             do
             {
                 try
                 {
-                    char sighn = Convert.ToChar(Console.ReadLine());
-                    if (sighn == '+' || sighn == '-' || sighn == '/' || sighn == '*')
+                    var sign = Convert.ToChar(Console.ReadLine() ?? string.Empty);
+                    if (sign == '+' || sign == '-' || sign == '/' || sign == '*')
                     {
-                        return sighn;
+                        return sign;
                     }
-                    Console.WriteLine("Please enter only avaliable sighns: +, -, *, =");
+                    Console.WriteLine("Please enter only available sign: +, -, *, =");
                 }
                 catch
                 {
-                    Console.WriteLine("Please enter only avaliable sighns");
+                    Console.WriteLine("Please enter only available sign");
                 }
 
             } while (true);
         }
 
 
-        static double makeCalculations(int firstValue, int secondValue, char sighn)
+        static double MakeCalculations(int firstValue, int secondValue, char sign)
         {
             double result;
 
-            switch (sighn)
+            switch (sign)
             {
                 case '+':
                     result = firstValue + secondValue;
@@ -73,9 +80,10 @@ namespace Homework_4
                     result = firstValue * secondValue;
                     break;
                 case '/':
-                    if(isSecondValueZero(secondValue))
+                    if(IsSecondValueZero(secondValue))
                     {
                         Console.WriteLine("secondValue is equal to 0, can`t perform the operation");
+                        
                         result = 0;
                         break;
                     }
@@ -83,16 +91,33 @@ namespace Homework_4
                     break;
                 default:
                     result = 0;
-                    Console.WriteLine("Error is ocured, answer is set to 0");
+                    Console.WriteLine("Error is occured, answer is set to 0");
                     break;
             }
             return result;
         }
 
-        static bool isSecondValueZero(int secondValue)
+        private static bool IsSecondValueZero(int secondValue)
         {
             bool isSecondValueZero = secondValue == 0;
             return isSecondValueZero;
+        }
+
+        private static bool IsOperationDivision(char sign)
+        {
+            bool isDivision = sign == '/';
+            return isDivision;
+        }
+
+        private static void PrintResult(double result, string operation)
+        {
+            Console.WriteLine($"{result}={operation}");
+        }
+
+        private static string ComposeOperationToString(int firstValue, int secondValue, char operationSign)
+        {
+            string operation = Convert.ToString(firstValue) + operationSign + Convert.ToString(secondValue);
+            return operation;
         }
     }
 }

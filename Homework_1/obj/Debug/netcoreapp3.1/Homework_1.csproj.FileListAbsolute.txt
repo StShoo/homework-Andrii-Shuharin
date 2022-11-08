@@ -1,0 +1,16 @@
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.csproj.AssemblyReference.cache
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.Form1.resources
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.csproj.GenerateResource.cache
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.AssemblyInfoInputs.cache
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.AssemblyInfo.cs
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.csproj.CoreCompileInputs.cache
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\bin\Debug\netcoreapp3.1\Homework_1.exe
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\bin\Debug\netcoreapp3.1\Homework_1.deps.json
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\bin\Debug\netcoreapp3.1\Homework_1.runtimeconfig.json
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\bin\Debug\netcoreapp3.1\Homework_1.runtimeconfig.dev.json
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\bin\Debug\netcoreapp3.1\Homework_1.dll
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\bin\Debug\netcoreapp3.1\Homework_1.pdb
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.dll
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.pdb
+C:\Users\Andrey\ProgramsForWork\.Net_C#_homework\Homework_1\obj\Debug\netcoreapp3.1\Homework_1.genruntimeconfig.cache

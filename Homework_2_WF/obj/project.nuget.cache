@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "d8UzWCA7hubdfg9kIcVnOzeE45OfspUlNAilghAHprotPIv0nVJBvka22RP6eNsc51df9RLG+9eGuf9C3gPcmg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Andrey\\ProgramsForWork\\.Net_C#_homework\\Homework_2_WF\\Homework_2_WF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -7,6 +7,8 @@ namespace Homework_4
         static void Main(string[] args)
         {
             task_1();
+            task_2();
+            task_3();
         }
 
         // Task 1
@@ -17,7 +19,7 @@ namespace Homework_4
             Console.Write("Please enter second number:");
             int secondValue = ReadValue();
             Console.Write("Please enter operation: ");
-            char sign = ReadSighn();
+            char sign = ReadSign();
             var result = MakeCalculations(firstValue,secondValue, sign);
 
             if (!(IsSecondValueZero(secondValue) && IsOperationDivision(sign)))
@@ -46,7 +48,7 @@ namespace Homework_4
             } while (true);
         }
 
-        static char ReadSighn()
+        private static char ReadSign()
         {
             do
             {
@@ -68,7 +70,7 @@ namespace Homework_4
         }
 
 
-        static double MakeCalculations(int firstValue, int secondValue, char sign)
+        private static double MakeCalculations(int firstValue, int secondValue, char sign)
         {
             double result;
 
@@ -123,5 +125,85 @@ namespace Homework_4
             string operation = Convert.ToString(firstValue) + operationSign + Convert.ToString(secondValue);
             return operation;
         }
+        
+        // Task 2
+        private static void task_2()
+        {
+            Console.Write("Enter int number: ");
+            int value = ReadValue();
+            DefineSegment(value);
+        }
+        private static void DefineSegment(int value)
+        {
+            if (value is >= 0 and <= 14)
+            {
+                Console.WriteLine("Your value is in [0 - 14]");
+            } else if (value is >= 15 and <= 35)
+            {
+                Console.WriteLine("Your value is in [15 - 35]");
+            } else if (value is >= 36 and <= 50)
+            {
+                Console.WriteLine("Your value is in [36 - 50]");
+            } else if (value is >= 51 and <= 100)
+            {
+                Console.WriteLine("Your value is in [51 - 100]");
+            }
+            else
+            {
+                Console.WriteLine("Your numbers lays in other segment");
+            }
+        }
+
+        //Task 3
+        private static void task_3()
+        {
+            FindInDictionary(CreateDictionary(), EnterUkrainianWord());
+        }
+
+        private static string EnterUkrainianWord()
+        {
+            Console.WriteLine("Enter word to translate: ");
+            string word = Console.ReadLine() ?? string.Empty;
+            word = word.ToLower();
+            return word;
+        }
+
+        private static Dictionary<int, Translation> CreateDictionary()
+        {
+            var uaUkDictionary = new Dictionary<int, Translation>()
+            {
+                {0, new Translation {Ukranian = "сонячно", English = "Sunny"}},
+                {1, new Translation {Ukranian = "пасмурно", English = "Mainly cloudy"}},
+                {2, new Translation {Ukranian = "легкий дощ", English = "Light rain"}},
+                {3, new Translation {Ukranian = "туман", English = "Fog"}},
+                {4, new Translation {Ukranian = "хурделиця", English = "Blizzard"}},
+                {5, new Translation {Ukranian = "сильний дощ", English = "Heavy rain"}},
+                {6, new Translation {Ukranian = "гроза", English = "Thunderstorm"}},
+                {7, new Translation {Ukranian = "волого", English = "Wet"}},
+                {8, new Translation {Ukranian = "засуха", English = "Drought"}},
+                {9, new Translation {Ukranian = "спека", English = "Hot"}}
+            };
+            return uaUkDictionary;
+        }
+
+        private static void FindInDictionary(Dictionary<int, Translation> uaUkDictionary, string wordToTranslate)
+        {
+            for (int i = 0; i < uaUkDictionary.Count; i++)
+            {
+                if (wordToTranslate.Equals(uaUkDictionary[i].Ukranian))
+                {
+                    Console.WriteLine($"Translation for {wordToTranslate} is {uaUkDictionary[i].English}");
+                    break;
+                }
+            }
+
+            Console.WriteLine("Sorry I don't know this word");
+        }
+    }
+
+    public class Translation
+    {
+        public string Ukranian { get; set; }
+        public string English { get; set; }
     }
 }

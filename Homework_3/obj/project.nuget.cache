@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Eenv0awJllPb+UUh7EvISpwRwrmoiy7+5LZMgBQ9rO9GpL2EkYRdZYMX3clKn3T8P/B9NVB24P9jgX9nKVBmww==",
+  "dgSpecHash": "yP8/mGHzMkAjXe+CJRteIDXiA5f5WxUigwow5mbgMRhGjOjEIY9MbPSBsxQa+4M05ej0QuX9eOBLcP73GfovxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andrey\\ProgramsForWork\\.Net_C#_homework\\Homework_3\\Homework_3.csproj",
+  "projectFilePath": "C:\\Users\\Andrey\\ProgramsForWork\\.Net_C#_homework\\On_Git_Hub\\Homework_3\\Homework_3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
   ],
